@@ -2,7 +2,7 @@ ALGORITHM sum diffferent
 VAR
     Set1 : ARRAY_OF INTEGER[N];
     Set2 : ARRAY_OF INTEGER[M];
-    sum,i,j: INTEGER;
+    sum,i,j,temp: INTEGER;
 BEGIN
 read (N);
 read(M);
@@ -17,17 +17,19 @@ sum :=0;
 FOR i FROM 0 TO N-1   DO
     FOR j FROM 0 TO M-1  DO
     IF (set1[i]<>set2[j]) THEN
-        sum:= sum + set1[i]
+        temp := set1[i]
     END_IF
     END_FOR
+    sum:= sum + set1[i]
 END_FOR
 
 FOR j FROM 0 TO M-1   DO
     FOR i FROM 0 TO N-1  DO
     IF (set2[j]<>set1[i]) THEN
-        sum:= sum + set2[j]
+        temp := set2[j]
     END_IF
     END_FOR
+    sum:= sum + set2[j]
 END_FOR
 
 write(sum);
