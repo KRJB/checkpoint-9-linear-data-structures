@@ -1,4 +1,4 @@
-ALGORITHM sum equals
+ALGORITHM sum equals hash
 VAR
     Set1 : ARRAY_OF INTEGER[N];
     Set2 : ARRAY_OF INTEGER[M];

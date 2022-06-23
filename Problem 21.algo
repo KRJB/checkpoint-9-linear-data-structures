@@ -1,8 +1,8 @@
-ALGORITHM different elements 
+ALGORITHM sum equal table
 VAR
     Set1 : ARRAY_OF INTEGER[N];
     Set2 : ARRAY_OF INTEGER[M];
-    temp,i,j: INTEGER;
+    sum,i,j,temp: INTEGER;
 BEGIN
 read (N);
 read(M);
@@ -12,25 +12,26 @@ END_FOR
 FOR i FROM 0 TO M-1  DO
     read(set1[i])
 END_FOR
-
+sum :=0;
 
 FOR i FROM 0 TO N-1   DO
     FOR j FROM 0 TO M-1  DO
-    IF (set1[i]<>set2[j]) THEN
+    IF (set1[i]=set2[j]) THEN
         temp := set1[i]
     END_IF
     END_FOR
-    write (set1[i])
+    sum:= sum + set1[i]
 END_FOR
 
 FOR j FROM 0 TO M-1   DO
     FOR i FROM 0 TO N-1  DO
-    IF (set2[j]<>set1[i]) THEN
+    IF (set2[j]=set1[i]) THEN
         temp := set2[j]
     END_IF
     END_FOR
-    write (set2[j])
+    sum:= sum + set2[j]
 END_FOR
 
+write(sum);
 
 END

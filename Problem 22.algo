@@ -1,9 +1,9 @@
-ALGORITHM equal elements
+ALGORITHM sum different hash
 VAR
     Set1 : ARRAY_OF INTEGER[N];
     Set2 : ARRAY_OF INTEGER[M];
     hash : HASH_TABLE<INTEGER,INTEGER>;
-    i : INTEGER;
+    sum,i : INTEGER;
 BEGIN
 
 read(N);
@@ -22,11 +22,11 @@ END_FOR
 
 sum := 0;
 FOR i FROM 0 TO M-1   DO
-IF (hash.lookup(set2[i]) = TRUE) THEN
-     htab.insert(set2[i],2)
-     write (set2[i])
+IF (hash.lookup(set2[i]) = FALSE) THEN
+     htab.insert(set2[i],1)
+     sum := sum + set2[i]
 ELSE
-    htab.insert(set2[i],1)
+    htab.insert(set2[i],2)
 END_IF
 END_FOR
 

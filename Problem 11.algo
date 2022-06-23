@@ -1,4 +1,4 @@
-ALGORITHM sum diffferent 
+ALGORITHM sum different table
 VAR
     Set1 : ARRAY_OF INTEGER[N];
     Set2 : ARRAY_OF INTEGER[M];
